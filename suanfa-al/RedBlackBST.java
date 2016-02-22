@@ -100,7 +100,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return h;
     }
 
-    // make a left-leaning link lean to the right
     private Node rotateRight(Node h) {
         assert (h != null) && isRed(h.left);
         Node x = h.left;
@@ -113,7 +112,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    // make a right-leaning link lean to the left
     private Node rotateLeft(Node h) {
         assert (h != null) && isRed(h.right);
         Node x = h.right;
@@ -126,7 +124,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    // flip the colors of a node and its two children
     private void flipColors(Node h) {
         // h must have opposite color of its two children
         assert (h != null) && (h.left != null) && (h.right != null);
