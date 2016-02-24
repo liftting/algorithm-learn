@@ -73,6 +73,28 @@ public class SymmetircTree {
         }
 
 
+        // === 网上的简洁，递归重新规划树结构 可以
+
+        private TreeNode flipTree(TreeNode root) {
+            if (root == null)
+                return null;
+            // 重新规划数，结构，方便后面的比较，直接将节点的left left对应上
+            TreeNode rTree = new TreeNode(root.val);
+            rTree.left = flipTree(root.right);
+            rTree.right = flipTree(root.left);
+            return rTree;
+        }
+
+        private boolean compareTree(TreeNode tr1, TreeNode tr2) {
+            if (tr1 == null && tr2 == null)
+                return true;
+            else if ((tr1 != null && tr2 != null) && (tr1.val == tr2.val))
+                return compareTree(tr1.left, tr2.left) && compareTree(tr1.right, tr2.right);
+            else
+                return false;
+        }
+        //======
+
     }
 
 }
