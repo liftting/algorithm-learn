@@ -1,3 +1,5 @@
+package search;
+
 /**
  * Created by wm on 16/2/22.
  * 红黑树，  2-3 查找树变形
