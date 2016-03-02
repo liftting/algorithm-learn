@@ -1,5 +1,8 @@
 package string;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * key value
  * shell  2
@@ -24,7 +27,7 @@ public class WordTree<Value> {
         return (Value) node.value;
     }
 
-    public Node get(Node node, String key, int index) {
+    private Node get(Node node, String key, int index) {
 
         if (node == null) return null;
 
@@ -49,7 +52,7 @@ public class WordTree<Value> {
      * @param index
      * @return
      */
-    public Node put(Node node, String key, Value value, int index) {
+    private Node put(Node node, String key, Value value, int index) {
 
         //递归到最后，字符串
         if (node == null) node = new Node();
@@ -63,6 +66,55 @@ public class WordTree<Value> {
 
         return node;
 
+    }
+
+    /**
+     * 查找所有以特定字符匹配的串集合
+     *
+     * @param pre
+     * @return
+     */
+    public Iterable<String> keyWithPre(String pre) {
+
+        Queue<String> queue = new ArrayDeque<String>();
+        collect(get(root, pre, 0), pre, queue);
+        return queue;
+
+    }
+
+    private void collect(Node node, String pre, Queue<String> q) {
+        if (node == null) return;
+
+        if (node.value != null) q.add(pre);
+        for (char c = 0; c < R; c++) {
+            collect(node.next[c], pre + c, q);
+        }
+
+    }
+
+    /**
+     * 最长前缀串匹配
+     * 注意，这个匹配的是前醉
+     *
+     * @param str
+     * @return
+     */
+    public String keyWithLongest(String str) {
+        int length = search(root, str, 0, 0);
+
+        return str.substring(0, length);
+    }
+
+    private int search(Node node, String str, int d, int len) {
+
+        if (node == null) return len;// 查找到了最底部
+
+        if (node.value != null) len = d;
+
+        if (d == str.length()) return len;//已经全部匹配了
+
+        char c = str.charAt(d);
+        return search(node.next[c], str, d + 1, len);
     }
 
 }
