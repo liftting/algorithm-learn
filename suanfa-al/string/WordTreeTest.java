@@ -21,14 +21,20 @@ public class WordTreeTest {
         wordTree.put("bali", 6);
         wordTree.put("ct", 7);
 
-        Iterable<String> iterable = wordTree.keyWithPre("c");
+        System.out.print(wordTree.get("she"));
 
-        Iterator itor = iterable.iterator();
-        while (itor.hasNext()) {
-            System.out.println(itor.next());
-        }
+        wordTree.delete("she");
 
-        System.out.println(wordTree.keyWithLongest("sheddd"));
+        System.out.print(wordTree.get("she"));
+
+//        Iterable<String> iterable = wordTree.keyWithPre("c");
+//
+//        Iterator itor = iterable.iterator();
+//        while (itor.hasNext()) {
+//            System.out.println(itor.next());
+//        }
+//
+//        System.out.println(wordTree.keyWithLongest("sheddd"));
 
     }
 

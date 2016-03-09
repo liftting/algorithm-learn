@@ -105,6 +105,15 @@ public class WordTree<Value> {
         return str.substring(0, length);
     }
 
+    /**
+     * 以当前节点查找字符
+     *
+     * @param node
+     * @param str
+     * @param d
+     * @param len
+     * @return
+     */
     private int search(Node node, String str, int d, int len) {
 
         if (node == null) return len;// 查找到了最底部
@@ -115,6 +124,40 @@ public class WordTree<Value> {
 
         char c = str.charAt(d);
         return search(node.next[c], str, d + 1, len);
+    }
+
+    public void delete(String key) {
+        root = delete(root, key, 0);
+    }
+
+
+    // she shellor  delete(she)  delete (sd)
+    private Node delete(Node node, String key, int d) {
+
+        //没有查找到
+        if (node == null) return null;
+
+        //递归到最后，朝找到整个完整链，修改后置节点值
+        if (d == key.length()) {
+            node.value = null; // 将e 节点值清空
+        } else {
+            char c = key.charAt(d);
+            node.next[c] = delete(node.next[c], key, d + 1);
+        }
+
+        //没有清除操作，是因为，delete的字符串都不在集合中时， 直接返回
+        if (node.value != null) return node;
+
+        //递归向上移除
+        for (char c = 0; c < R; c++) {
+            if (node.next[c] != null) {
+                //这个节点，别的还有用，
+                return node;
+            }
+        }
+
+        return null;
+
     }
 
 }
