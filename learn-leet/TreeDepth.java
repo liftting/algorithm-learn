@@ -2,8 +2,6 @@
  * 求 树的深度
  */
 
-import TreeNodeFactory.TreeNode;
-
 public class TreeDepth {
 
     public static void main(String[] args) {

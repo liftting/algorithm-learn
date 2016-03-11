@@ -7,18 +7,8 @@ import java.util.Stack;
 /**
  * Created by wm on 16/3/10.
  */
+
 public class BinaryTreeOrderOne {
-
-    public static class TreeNode {
-        Integer val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(Integer x) {
-            val = x;
-        }
-    }
-
     /**
      * 1，跟节点入队列，
      * 2，不断从队列头获取节点，如果左右节点不为空，入队列，
@@ -69,7 +59,7 @@ public class BinaryTreeOrderOne {
 
     }
 
-    public class RevertSolution {
+    public static class RevertSolution {
 
         public List<List<Integer>> levelOrder(TreeNode root) {
             List<List<Integer>> orderList = new ArrayList<List<Integer>>();
@@ -117,7 +107,7 @@ public class BinaryTreeOrderOne {
     }
 
 
-    public class OtherSolution {
+    public static class OtherSolution {
         /**
          * @param root
          * @return

@@ -2,17 +2,6 @@
  * Created by wm on 16/2/24.
  */
 public class SameTree {
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      *
      * [0] [1]
