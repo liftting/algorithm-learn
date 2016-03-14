@@ -41,11 +41,15 @@ public class InvertBinaryTree {
 
             if (node == null) return null;
 
+            //递归到了底部，直接返回
             if (node.left == null && node.right == null) return node;
+
+            //放这里是先进行操作，再进行递归
 
             invertTree(node.left);
             invertTree(node.right);
 
+            //上面是先递归到底部，再进行操作，
             convertLeftRight(node);
 
             return node;
