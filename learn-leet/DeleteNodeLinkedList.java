@@ -1,5 +1,6 @@
 /**
  * Created by wm on 16/3/14.
+ * 237 ：delete node in linkedlist
  */
 public class DeleteNodeLinkedList {
 
