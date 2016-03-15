@@ -46,5 +46,17 @@ public class TreeNodeFactory {
 
     }
 
+    public static ListNode buildListNode() {
+        ListNode root = new ListNode(0);
+        ListNode next = root;
+        for (int i = 1; i < 1; i++) {
+            ListNode temp = new ListNode(i);
+            next.next = temp;
+            next = temp;
+        }
+
+        return root;
+    }
+
 
 }
