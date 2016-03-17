@@ -12,10 +12,7 @@ public class ReverseList {
         Solution s = new Solution();
         ListNode node = s.reverseList(root);
 
-        while (node != null) {
-            System.out.println(node.val);
-            node = node.next;
-        }
+        TreeNodeFactory.showListNode(node);
 
     }
 
