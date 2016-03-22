@@ -9,6 +9,8 @@ import java.util.Arrays;
  * 前者有f(n-1)种方法，后者有f(n-2)种方法，所以有f(n)=f(n-1)+f(n-2),还有f(0)=1,f(1)=1.
  * <p/>
  * http://blog.csdn.net/ryj111/article/details/5192969
+ * <p/>
+ * 动态规划方程
  */
 public class StepOneTwoWay {
 
