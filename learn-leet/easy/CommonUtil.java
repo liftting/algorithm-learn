@@ -13,4 +13,11 @@ public class CommonUtil {
         System.out.println(data);
     }
 
+    public static void show(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + " ");
+        }
+        System.out.println();
+    }
+
 }
