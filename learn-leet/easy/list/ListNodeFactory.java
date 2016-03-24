@@ -7,12 +7,12 @@ public class ListNodeFactory {
 
     public static ListNode buildListNode() {
         ListNode root = new ListNode(1);
-        ListNode next = root;
-        for (int i = 2; i < 10; i++) {
-            ListNode temp = new ListNode(i);
-            next.next = temp;
-            next = temp;
-        }
+//        ListNode next = root;
+//        for (int i = 2; i < 10; i++) {
+//            ListNode temp = new ListNode(i);
+//            next.next = temp;
+//            next = temp;
+//        }
 
         return root;
     }
