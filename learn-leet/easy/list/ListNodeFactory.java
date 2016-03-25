@@ -33,6 +33,9 @@ public class ListNodeFactory {
     }
 
     public static void showListNode(ListNode node) {
+
+        if (node == null) System.out.print("is empty");
+
         while (node != null) {
             System.out.print(node.val + " ");
 
