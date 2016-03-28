@@ -33,4 +33,11 @@ public class CommonUtil {
         System.out.println();
     }
 
+    public static void showInteger(List<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + ",");
+        }
+        System.out.println();
+    }
+
 }

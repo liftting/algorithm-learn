@@ -27,3 +27,15 @@ RemoveNthNode : 链表删除，两个游标走动
 ReverseInteger: 注意计算溢出  * 10 换算
 
 ValidPar ： 类似正则，匹配，使用栈结构
+
+
+
+3-28：
+CountPrimes: 计算质数，利用填充法 将一个数的倍数进行划分
+SummaryRanges: 计算范围的数，遍历即可
+
+
+
+
+
+
