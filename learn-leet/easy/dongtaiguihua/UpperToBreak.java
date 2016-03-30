@@ -9,7 +9,7 @@ package easy.dongtaiguihua;
 public class UpperToBreak {
 
     public static void main(String[] args) {
-        System.out.print(dropEgg(100, 2));
+        System.out.print(dropEgg(80, 2));
     }
 
     // times[i]表示N取值为i的时候，需要扔多少次

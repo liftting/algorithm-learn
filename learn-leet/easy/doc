@@ -34,6 +34,29 @@ ValidPar ： 类似正则，匹配，使用栈结构
 CountPrimes: 计算质数，利用填充法 将一个数的倍数进行划分
 SummaryRanges: 计算范围的数，遍历即可
 
+RangeSumQuery : 计算数据 范围值，注意策略， 提前缓存，因为查询方法平凡调用
+
+PalindromeList : 回文链表， 注意反转， 和查询遍历，  时间 空间复杂度
+
+RemoveLinkedList : 两指针走动
+
+BitsAdd :
+
+
+3-19：
+Two Sum ：一般在处理数组索引位置时，可以利用map来存储
+
+RotateArray : 数组后移，特殊情况判断，
+
+First Bad Version ： 二分逻辑处理，
+
+Min Stack ： 处理时，使用链表，效率更高，获取最小值时，
+
+Compare Version Numbers : 字符截取，判断，
+
+String to integer : 要处理很多特殊的case，逻辑 + -
+
+
 
 
 

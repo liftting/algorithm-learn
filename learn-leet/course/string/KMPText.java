@@ -1,4 +1,4 @@
-package string;
+package course.string;
 
 /**
  * Created by wm on 16/3/9.
