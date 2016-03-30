@@ -1,7 +1,6 @@
-package course.string;
+package qiyuesuanfa.string;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 
 import easy.CommonUtil;

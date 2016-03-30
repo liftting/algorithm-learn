@@ -1,5 +1,7 @@
 package easy.numoperation;
 
+import easy.CommonUtil;
+
 /**
  * Created by wm on 16/3/16.
  * 191. Number of 1 Bits
@@ -8,7 +10,7 @@ public class NumberOneBits {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.hammingWeight(Integer.MAX_VALUE);
+        CommonUtil.show(s.goodCalculate(1234));
     }
 
     public static class Solution {

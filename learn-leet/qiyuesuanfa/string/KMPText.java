@@ -1,4 +1,4 @@
-package course.string;
+package qiyuesuanfa.string;
 
 /**
  * Created by wm on 16/3/9.
