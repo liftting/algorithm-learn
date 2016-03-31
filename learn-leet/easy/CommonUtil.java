@@ -26,6 +26,13 @@ public class CommonUtil {
         System.out.println();
     }
 
+    public static void show(int[] data,int index) {
+        for (int i = index; i < data.length; i++) {
+            System.out.print(data[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void show(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + ",");

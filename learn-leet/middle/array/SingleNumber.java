@@ -1,4 +1,4 @@
-package middle.numoperation;
+package middle.array;
 
 /**
  * Created by wm on 16/3/30.
