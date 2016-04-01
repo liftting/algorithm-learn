@@ -36,6 +36,7 @@ public class BulbSwitcher {
             //倍数  划分一半
             for (int swch = 2; swch <= n / 2; swch++) {
                 // 以swch 进行递增
+                // 3 3+3 3+3+3
                 for (int bulb = 2 * swch; bulb < n + 1; bulb += swch) {
                     bulbs[bulb] = !bulbs[bulb];
                 }
