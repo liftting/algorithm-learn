@@ -14,7 +14,33 @@ public class ListNodeFactory {
             next = temp;
         }
 
+//        next.next = root;
+
         return root;
+    }
+
+    public static ListNode buildCycleListNode() {
+        ListNode root = new ListNode(1);
+//        ListNode next = root;
+//        for (int i = 2; i <= 3; i++) {
+//            ListNode temp = new ListNode(i);
+//            next.next = temp;
+//            next = temp;
+//        }
+//        ListNode four = new ListNode(4);
+//        ListNode five = new ListNode(4);
+//
+//        next.next = four;
+//        four.next = five;
+//        five.next = next;
+
+        ListNode second = new ListNode(2);
+        root.next = second;
+        second.next = root;
+
+
+        return root;
+
     }
 
     public static ListNode buildListNode(int[] array) {
@@ -41,6 +67,13 @@ public class ListNodeFactory {
 
             node = node.next;
         }
+    }
+
+    public static void showListNodeSingle(ListNode node) {
+
+        if (node == null) System.out.print("is empty");
+
+        System.out.print(node.val);
     }
 
 }

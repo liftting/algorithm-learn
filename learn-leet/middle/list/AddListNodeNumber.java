@@ -1,4 +1,4 @@
-package middle.stackqueue;
+package middle.list;
 
 import easy.list.ListNode;
 import easy.list.ListNodeFactory;
