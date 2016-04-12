@@ -28,4 +28,54 @@ WordLadder : 注意广搜的写法， 不是递归的，  同时注意判断字�
 
 
 4-6：
+GasStation : 加油站，消耗，能否回来问题， 有暴力
+
+FlattenBinaryTree ： 转换成一个右边的长长的链表问题，
+
+
+4-7:
+MultiNumberAddSum ：下面是一类问题，一个数组，几个数相加等于一个sum，求所有可能，暴力递归，超时
+ThreeNumber:
+FourSum:  也可以多重循环判断
+
+InsertSortLinkedList:单链表的插入排序，第一个元素后插入
+
+
+WordBreaker: 词的截取， DFS深搜，递归，切换不同的起点即可，
+
+LCA ： 链表的最近公共祖先， 一个先走，m 两个一起走问题
+
+
+4-11:
+IntersectLinkedList: 链表，先走问题
+JumGame : 移动的范围，有规则
+
+DecodeWays: DP (12-AB 或者L ，所以有个地推公式
+
+LinkedListCycle:  链表带环，走一步， 两步，相交那么久有环
+LinkedListCycleBegin:类似上面，但是判断交点入口，有个规则，
+
+
+AddListNodeNumber:两个链表数相加， 考虑进位， 只考虑一个数字的进位，不可能一次两个进位
+
+CoinSelect: DP问题，硬币搜集
+LongAscArray: DP , 最长非降子序列
+
+4-12:
+LeetPhoneNumber: 使用递归，带着集合进行下一次的递归操作
+
+ArrayConvertTree: 将数组转换为高度平衡的 二叉树，那么每次构建节点时，都取中间的位置节点
+ListConvertTree: 类似上面的，链表转换为数组即可，
+
+BinarySearchTreeUnique: 这个难， 其实是两个问题， 给一个数，判断1-n 中能构建出多少个二叉树，
+而满足二叉树的规则是，左边 要小于节点，右边大于节点，
+那么每个节点都作为子节点，进行左边递归， 和右边递归，
+每次递归出来，都起始以当前节点为根的节点，子树情况，都会添加进来，
+
+那返回的集合就是节点数目，
+在求数目时，递归超时，使用DP
+
+
+
+
 
