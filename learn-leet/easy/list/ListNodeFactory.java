@@ -1,5 +1,8 @@
 package easy.list;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by wm on 16/3/22.
  */
@@ -74,6 +77,26 @@ public class ListNodeFactory {
         if (node == null) System.out.print("is empty");
 
         System.out.print(node.val);
+    }
+
+    public static List<List<Integer>> buildTwoList() {
+// 1 2
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        int[][] data = new int[][]{
+                {-1}, {2, 3}, {1, -1, 3}
+
+        };
+        for (int i = 0; i < data.length; i++) {
+            int[] res = data[i];
+            List<Integer> list = new ArrayList<Integer>();
+            for (int j = 0; j < res.length; j++) {
+                list.add(res[j]);
+            }
+            result.add(list);
+        }
+
+        return result;
+
     }
 
 }
