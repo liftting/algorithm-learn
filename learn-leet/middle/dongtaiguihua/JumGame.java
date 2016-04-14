@@ -1,4 +1,4 @@
-package middle.array;
+package middle.dongtaiguihua;
 
 import easy.CommonUtil;
 
