@@ -13,22 +13,14 @@ import easy.CommonUtil;
 public class Pailie {
 
     public static void main(String[] args) {
-        SortDigui s1 = new SortDigui();
-        s1.calute();
-
-        CommonUtil.show("======");
 
         SortLine s2 = new SortLine();
         s2.calute();
 
-        CommonUtil.show("======");
-
-//        OtherPai s3 = new OtherPai();
-//        s3.combination(str, str.length);
-
     }
 
-    public static int[] str = new int[]{1, 2, 3};
+    public static int[] str = new int[]{16, 27, 25, 23, 25, 16, 12, 9, 1, 2, 7, 20, 19, 23, 16, 0, 6, 22,
+            16, 11, 8, 27, 9, 2, 20, 2, 13, 7, 25, 29, 12, 12, 18, 29, 27, 13, 16, 1, 22, 9, 3, 21, 29, 14, 7, 8, 14, 5, 0, 23, 16, 1, 20};
 
     public static void show() {
         for (int i = 0; i < str.length; i++) {
@@ -82,6 +74,8 @@ public class Pailie {
      * <p/>
      * 如何计算字符串的下一个排列了？来考虑"926520"这个字符串，我们从后向前找第一双相邻的递增数字，"20"、"52"都是非递增的，"26 "即满足要求，称前一个数字2为替换数，
      * 替换数的下标称为替换点，再从后面找一个比替换数大的最小数（这个数必然存在），0、2都不行，5可以，将5和2交换得到"956220"，然后再将替换点后的字符串"6220"颠倒即得到"950226"。
+     * <p/>
+     * 有问题，上面例子会异常，
      */
     public static class SortLine {
 
