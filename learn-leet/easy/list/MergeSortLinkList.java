@@ -74,6 +74,30 @@ public class MergeSortLinkList {
             return head;
 
         }
+
+
+        public ListNode mergeList(ListNode h1, ListNode h2) {
+            ListNode first = new ListNode(Integer.MIN_VALUE);
+            ListNode next = first;
+
+            while (h1 != null && h2 != null) {
+
+                if (h1.val < h2.val) {
+                    next.next = h1;
+                    h1 = h1.next;
+                } else {
+                    next.next = h2;
+                    h2 = h2.next;
+                }
+
+                next = next.next;
+            }
+            if (h1 != null)
+                next.next = h1;
+            if (h2 != null)
+                next.next = h2;
+            return first.next;
+        }
     }
 
 }
