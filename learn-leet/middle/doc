@@ -126,11 +126,28 @@ Permutation:
 排列的线性算法有点问题：
 
 
-5-4：二分查找题
+5-9：二分查找题
 SearchForRanage: 查找一个数据 带范围的，二分查找，范围后继续二分
 
 SearchInsertPos:查找插入的位置，有序就是二分处理
 
 SearchRotatedSoryArray:数组原来是有序的，现在在某一个位置配反转了，查找元素所在的索引位置，二分原理，有技巧
+
+setMatrixZeros: 一个二维数组，置0，空间复杂度O(m+n)，但是有常数的空间复杂度
+
+RotateList ：链表的反转，记录好几个特殊点的位置， （技巧，利用堆栈结构来处理）
+
+
+5-10:
+RemoveDuplicateSortArrayTwo:在数组中移除掉重复的两个 元素, 排序的，两位置标记即可
+
+RemoveDuplicateSortListTwo: 链表的元素重复处理，注意创建个头结点，方便处理，
+
+RoatteList: 链表反转， 多指针扫描，处理， 注意 取余数操作，
+
+SortColors: 排序问题，快排，划分，
+
+SetMatrixZeros: 设置为0问题，可优化地方是，常数 的额外空间暂用
+
 
 
