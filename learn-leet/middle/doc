@@ -151,5 +151,22 @@ SetMatrixZeros: 设置为0问题，可优化地方是，常数 的额外空间�
 
 SortList: 链表的排序，都是可以参考数组的，注意节点处理，这个使用的 归并排序
 
+
+
+// 回溯问题集合
 Combinations: 对于选择 不选择的 组合问题， 回溯法可以解决，注意状态还原
+
+
+5-11：
+
+CombinationsSum: 求和，回溯，注意元素可以重复添加时情况，
+
+CombinationsSumTwo：回溯，注意当包含重复元素时，如何去重，要先排序
+
+CombinationsSumThree: 回溯 注意下判断，避免重复的递归，添加分支限界条件
+
+FactorialZeros : 遍历时找规律， 5 的倍数问题
+
+FindPeekElement: 查找峰值元素， 遍历即可，注意边界问题
+
 
