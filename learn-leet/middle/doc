@@ -169,3 +169,13 @@ FactorialZeros : 遍历时找规律， 5 的倍数问题
 FindPeekElement: 查找峰值元素， 遍历即可，注意边界问题
 
 SearchRotatedSoryArrayTwo: 旋转数组查找，有规律，当重复时，有特殊的判断
+
+
+5-12:
+InAndPostorderBuildTree: 中 后构造树， 注意递归，
+
+PreAndInorderBuildTree: 前，中 构造树，
+
+
+
+
