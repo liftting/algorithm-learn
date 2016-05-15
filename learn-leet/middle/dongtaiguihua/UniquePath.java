@@ -102,6 +102,7 @@ public class UniquePath {
                     Integer val = res[x + 1][y];
                     if (val == null) {
                         val = search(visited, res, x + 1, y, m, n);
+                        res[x + 1][y] = val;
                     }
                     sum += val;
                 }
@@ -112,6 +113,7 @@ public class UniquePath {
                     Integer val = res[x][y + 1];
                     if (val == null) {
                         val = search(visited, res, x, y + 1, m, n);
+                        res[x][y + 1] = val;
                     }
                     sum += val;
                 }
