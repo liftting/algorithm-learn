@@ -33,7 +33,7 @@ public class SubSets {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        CommonUtil.showList(s.subsetsOther(new int[]{1, 2, 3}, 0, 3));
+        CommonUtil.showList(s.subsetsOther(new int[]{1, 2, 2}, 0, 3));
     }
 
     public static class Solution {

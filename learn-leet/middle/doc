@@ -189,6 +189,9 @@ StringBufferTest: java函数传递 ，值传递，
 RotateString：字符串的左旋转，有技巧， 多次部分左旋转，再总体左旋转即可
 
 
+5-16:
+SubSetsTwo: 求子集合时， 注意递归的方式，便于去掉重复元素的递归
 
+PartitionList： 求 链表的划分操作，用到特殊的判断，不是类似数组的划分方式，
 
 
