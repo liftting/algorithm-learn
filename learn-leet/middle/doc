@@ -20,7 +20,7 @@ FindMinArray:排序数组，查找最小，二分，
 
 DivideNumber: 利用二进制的加 减处理
 
-ThreeSumZero: 三个数，排序，利用索引，注意时间复杂度的降低，left 初始位置，
+ThreeSumZero: 三个数，paixu，利用索引，注意时间复杂度的降低，left 初始位置，
 
 WordSearch： 类似树的搜索， 回溯法解决，递归
 

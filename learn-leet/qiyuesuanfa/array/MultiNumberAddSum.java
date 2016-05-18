@@ -3,7 +3,7 @@ package qiyuesuanfa.array;
 /**
  * Created by wm on 16/4/5.
  * 一个数组， 查找到两个数 和 sum
- * 1， 排序，两索引查找
+ * 1， paixu，两索引查找
  * 2， hash 查找 （hash 存在冲突，）
  * // == 多个 add 时，
  * <p/>

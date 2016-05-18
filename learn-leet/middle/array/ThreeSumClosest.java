@@ -32,7 +32,7 @@ public class ThreeSumClosest {
 
             if (nums == null || nums.length <= 0) return 0;
 
-            // 1,排序， 2，左边一指针，右边一  mid
+            // 1,paixu， 2，左边一指针，右边一  mid
 
             Arrays.sort(nums);
 

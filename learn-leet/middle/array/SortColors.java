@@ -15,7 +15,7 @@ import easy.CommonUtil;
  * Note:
  * You are not suppose to use the library's sort function for this problem.
  * <p/>
- * 排序
+ * paixu
  * 0 1 2 0 1 2 - 0 0 0 1 1 1 2 2 2
  * 1，
  * 从小到大排序，快排 快速排序

@@ -34,7 +34,7 @@ public class ThreeSumZero {
          * <p/>
          * <p/>
          * -4 -1 -1 0 1 2
-         * 查找三个数， 排序
+         * 查找三个数， paixu
          * 比0小 ，比0 大，
          * <p/>
          * i left right

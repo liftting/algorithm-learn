@@ -11,7 +11,7 @@ import easy.CommonUtil;
  * <p/>
  * If the target is not found in the array, return [-1, -1].
  * <p/>
- * 1,排序，查找范围，有重复的
+ * 1,paixu，查找范围，有重复的
  * <p/>
  * 1，第一次二分查找，mid 位置，
  * 2，基于查找到的，向左，向右继续二分查找 start end

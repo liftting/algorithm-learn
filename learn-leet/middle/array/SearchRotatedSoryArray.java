@@ -15,7 +15,7 @@ import easy.CommonUtil;
  * You may assume no duplicate exists in the array.
  * 1,没有重复元素
  * 2，暴力时间O(n) -- O(logN)
- * 3，排序，+ 二分查找 o(logN)
+ * 3，paixu，+ 二分查找 o(logN)
  * <p/>
  * 4，规律：
  * 借由二分法，只不过在找到中间的数了之后，需要比较中间数和最右数（或者最左数），有这样的结论：

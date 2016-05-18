@@ -18,7 +18,7 @@ public class SingleNumber {
     }
 
     /**
-     * 1,排序，
+     * 1,paixu，
      * 2，map存储
      * <p/>
      * 3,利用亦或  规则：一个数异或本身恒等于0，如5^5恒等于0；
