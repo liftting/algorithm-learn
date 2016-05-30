@@ -35,6 +35,15 @@ import easy.CommonUtil;
  * 3，hash map ，+ 桶排序，
  * 4，hash map + 优先队列，  -- 最终都是数据排序的问题，
  * <p/>
+ * ===
+ * 再分析：
+ * 1，其实这个题，就是部分排序的问题，选择排序，或插入排序， 就排K个元素即可 时间复杂度 o(n * k)
+ * 2，快速排序时，思考的划分方案， 每次划分，都是左右有部分，
+ * 3，k 的最小顶堆， 时间复杂度 更新小顶堆的时间复杂度是O(log2K)
+ * <p/>
+ * <p/>
+ * <p/>
+ * <p/>
  * <p/>
  */
 public class TopKElements {
@@ -120,6 +129,31 @@ public class TopKElements {
                 result.add(queue.poll().getKey());
             }
             return result;
+        }
+
+        public void topDui(int[] values, int x, int k) {
+            if (x > values[0]) {
+                //比k 个元素中的最小的元素要大，
+                values[0] = x;
+
+                int p = 0;
+                while (p < k) {
+                    int q = 2 * p + 1;
+                    if (q >= k) break;
+                    if (q < k - 1 && values[q + 1] < values[q]) {
+                        q = q + 1;
+                    }
+
+                    if (values[q] < values[p]) {
+                        int t = values[p];
+                        values[p] = values[q];
+                        values[q] = t;
+                        p = q;
+                    } else break;
+
+                }
+
+            }
         }
 
 

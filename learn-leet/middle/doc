@@ -206,3 +206,8 @@ TopKElements ：问题 先 hash 得到数据的map, 然后在就可以转换为 
 
 5-24：
 BinaryOneCount: 求一个二进制中1的个数， 与运算的大法
+
+5-30：
+
+WordPattern ： 字符串匹配规则， 充分利用了Hash的特性，去重，存储，
+GroupAnagrams : 字符串的 相关匹配， HashMap 排序，

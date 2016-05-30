@@ -69,6 +69,17 @@ public class CommonUtil {
 
     }
 
+    public static void showStringList(List<List<String>> list) {
+        for (int i = 0; i < list.size(); i++) {
+            List<String> cur = list.get(i);
+            for (String s : cur) {
+                System.out.print(s + ",");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static int[][] buildArrayMap() {
         int[][] data = new int[][]{
                 {1, 2, 3, 4, 5},
