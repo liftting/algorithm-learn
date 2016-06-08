@@ -40,11 +40,11 @@ public class BuySellStock {
 
             max[len - 1] = prices[len - 1];
 
-
+            // 动态规划， 前面一项是否有最大，是根据后面的来计算的，
             for (int i = len - 2; i >= 0; i--) {
-                if (prices[i] > max[i + 1]) {
+                if (prices[i] > max[i + 1]) { // 当前的要比后面的大，那就存起来，
                     max[i] = prices[i];
-                } else {
+                } else { // 比起小，说明后面的利润要大，那就存之前的，
                     max[i] = max[i + 1]; // 因为先买， 所以从后来递推，
                 }
             }

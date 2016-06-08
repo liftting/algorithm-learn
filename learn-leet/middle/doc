@@ -211,3 +211,12 @@ BinaryOneCount: 求一个二进制中1的个数， 与运算的大法
 
 WordPattern ： 字符串匹配规则， 充分利用了Hash的特性，去重，存储，
 GroupAnagrams : 字符串的 相关匹配， HashMap 排序，
+
+
+6-6：
+
+BuySellStockTwo: 买卖东西，计算最大值，收益问题， 贪心，注意考虑特殊情况下，也是满足贪心策略的
+
+IntegerBreak: 整数拆分 求乘积最大值， 这个以3作为最小值来试探，而不是2 ，注意剩下1时，转换逻辑
+
+

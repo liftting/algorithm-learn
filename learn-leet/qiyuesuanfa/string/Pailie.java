@@ -14,13 +14,15 @@ public class Pailie {
 
     public static void main(String[] args) {
 
-        SortLine s2 = new SortLine();
-        s2.calute();
+//        SortLine s2 = new SortLine();
+//        s2.calute();
+
+        NextSolution nextSolution = new NextSolution();
+        nextSolution.show(str);
 
     }
 
-    public static int[] str = new int[]{16, 27, 25, 23, 25, 16, 12, 9, 1, 2, 7, 20, 19, 23, 16, 0, 6, 22,
-            16, 11, 8, 27, 9, 2, 20, 2, 13, 7, 25, 29, 12, 12, 18, 29, 27, 13, 16, 1, 22, 9, 3, 21, 29, 14, 7, 8, 14, 5, 0, 23, 16, 1, 20};
+    public static int[] str = new int[]{1, 2, 3};
 
     public static void show() {
         for (int i = 0; i < str.length; i++) {
@@ -195,6 +197,76 @@ public class Pailie {
                 reverse(a, i + 1, length - 1);
             }
         }
+    }
+
+
+    // 字典序列排列，即如何求出当前排列的下一次全排列
+    // 求一个排列的下一个排列
+
+    /**
+     * 1,找到排列中最后（最右边）一个升序的首位位置 i, x = ai;
+     * 2,找到排列中的第i位右边的最后一个比ai要大的位置j， y = aj;
+     * 3，交换 x y
+     * 4,把第 i+1位到最后的部分进行翻转，
+     */
+
+
+    public static class NextSolution {
+
+        public void show(int[] data) {
+            if (data.length < 2) return;
+
+            Arrays.sort(data);
+
+            boolean isGo = true;
+
+            while (isGo) {
+                print(data);
+
+                isGo = calcAllPermution(data);
+            }
+        }
+
+        public boolean calcAllPermution(int[] data) {
+
+            int i;
+            int len = data.length;
+            for (i = len - 2; (i >= 0) && data[i] >= data[i + 1]; i--) ;
+
+            if (i < 0) return false;
+
+            int k;
+
+            for (k = len - 1; (k > i) && (data[k] <= data[i]); --k) ;
+
+            // 交换 步骤3
+            swap(data, i, k);
+
+            // 步骤4
+            reverse(data, i + 1, len - 1);
+
+
+            return true;
+        }
+
+        private void swap(int[] data, int x, int y) {
+            int temp = data[x];
+            data[x] = data[y];
+            data[y] = temp;
+        }
+
+        private void reverse(int a[], int i, int j) {
+            for (; i < j; ++i, --j) {
+                swap(str, i, j);
+            }
+        }
+
+        private void print(int a[]) {
+            for (int i = 0; i < a.length; ++i)
+                System.out.print(a[i]);
+            System.out.println();
+        }
+
     }
 
 
