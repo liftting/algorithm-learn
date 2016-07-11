@@ -1,13 +1,40 @@
 package search;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+
+import easy.CommonUtil;
+import easy.tree.BinaryTreeOrderOne;
+import easy.tree.TreeNode;
+import easy.tree.TreeNodeFactory;
+import string.WordTree;
 
 /**
  * Created by wm on 16/2/19.
  * this is cha zhao tree
+ * <p/>
+ * 二叉查找树，
  */
 public class ChazhaoTree {
 
+    public static void main(String[] args) {
+
+        BST<Integer, Integer> bst = new BST<Integer, Integer>();
+        int[] data = new int[]{4, 2, 3, 1, 5, 6};
+
+        for (int d : data) {
+            bst.put(d, d);
+        }
+
+        bst.show();
+
+        bst.remove(bst.root,2);
+
+        bst.show();
+
+
+    }
 
     public static class BST<Key extends Comparable<Key>, Value> {
 
@@ -33,6 +60,11 @@ public class ChazhaoTree {
         }
 
         public void put(Key key, Value value) {
+            if (root == null) {
+                root = put(root, key, value);
+            } else {
+                put(root, key, value);
+            }
 
         }
 
@@ -112,6 +144,26 @@ public class ChazhaoTree {
 
         }
 
+        private Node remove(Node node, Key key) {
+            if (node == null) return node;
+
+            int cp = key.compareTo(node.key);
+            if (cp < 0) {
+                return remove(node.left, key);
+            } else if (cp > 0) {
+                return remove(node.right, key);
+            } else if (node.left != null && node.right != null) {
+
+                node.value = min(node.right).value;
+                node.right = deleteMin(node.right);
+
+            } else {
+                node = (node.left != null) ? node.left : node.right;
+            }
+
+            return node;
+        }
+
         private Node delete(Node node, Key key) {
             if (node == null) return null;
             int cmp = key.compareTo(node.key);
@@ -124,8 +176,9 @@ public class ChazhaoTree {
                 if (node.left == null) return node.right;
 
                 Node t = node;
+                // t 先存储着要删除的节点，
 
-                //替换
+                //替换  查找到要替换的节点了，
                 node = min(t.right);
 
                 node.right = deleteMin(t.right);
@@ -134,6 +187,59 @@ public class ChazhaoTree {
             }
             node.N = size(node.left) + size(node.right) + 1;
             return node;
+
+        }
+
+        private List<List<Value>> levelOrder(Node root) {
+            List<List<Value>> orderList = new ArrayList<List<Value>>();
+            if (root == null) return orderList;
+
+            List<Node> oldList = new ArrayList<Node>();
+            oldList.add(root);
+
+            while (true) {
+                //两个集合，不断更新
+                List<Node> dataList = new ArrayList<Node>();
+                List<Value> list = new ArrayList<Value>();
+
+                for (Node node : oldList) {
+                    list.add(node.value);
+
+                    if (node.left != null) {
+                        dataList.add(node.left);
+                    }
+                    if (node.right != null) {
+                        dataList.add(node.right);
+                    }
+
+                }
+
+                if (list.size() > 0) {
+                    orderList.add(list);
+                }
+
+                if (dataList.size() == 0) break;
+
+                oldList = dataList;
+
+
+            }
+
+            return orderList;
+
+        }
+
+        private void show() {
+            List<List<Value>> datalist = levelOrder(root);
+
+            for (List<Value> data : datalist) {
+                for (Value t : data) {
+                    System.out.print(t + " ");
+                }
+
+                System.out.print("\n");
+
+            }
 
         }
 

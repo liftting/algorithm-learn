@@ -48,7 +48,7 @@ public class BinarySearch {
     public static int binarySearchTwo(int array[], int n, int value) {
         int left = 0;
         int right = n - 1;
-        while (left < right) {
+        while (left < right) { //如果只有一个元素时，这里判断就需要在进行一次查找判断，
             int middle = (left + right) / 2;
 
             if (array[middle] > value) {
