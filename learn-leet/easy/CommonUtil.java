@@ -51,6 +51,10 @@ public class CommonUtil {
         System.out.println();
     }
 
+    public static void show(double a) {
+        System.out.println(a);
+    }
+
     public static void showInteger(List<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + ",");
