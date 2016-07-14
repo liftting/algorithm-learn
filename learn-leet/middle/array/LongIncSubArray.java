@@ -1,6 +1,7 @@
 package middle.array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import easy.CommonUtil;
@@ -34,8 +35,6 @@ import easy.CommonUtil;
  * <p/>
  * 3，dp
  * 计算好前面的没一项的最优值，存表，后面再进行查询，判断，
- *
- *
  */
 public class LongIncSubArray {
 
@@ -157,6 +156,24 @@ public class LongIncSubArray {
         }
 
 
+    }
+
+
+    // this is nLog(n)的时间复杂度处理，TODO 后看
+    public class DPBinarySolution {
+        public int lengthOfLIS(int[] nums) {
+            int[] dp = new int[nums.length];
+            int len = 0;
+
+            for (int x : nums) {
+                int i = Arrays.binarySearch(dp, 0, len, x);
+                if (i < 0) i = -(i + 1);
+                dp[i] = x;
+                if (i == len) len++;
+            }
+
+            return len;
+        }
     }
 
 }
