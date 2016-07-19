@@ -247,7 +247,12 @@ LongIncSubArray：求最长的递增字序列， 贪心算法解决会有问题�
 但dp普通的处理方式，时间复杂度O(n2) ，会比较高，
 
 
+7-18:
+FindDuplicateNumber:查找重复的一个数字，有时间和空间复杂度的要求，TODO 阶段
 
+7-19：
+CountNumWithUnqiueDigits: 查找出没有重复的数字， 这个策略使用的是 回溯，
+回溯策略，带着递归，状态回转，
 
 
 
