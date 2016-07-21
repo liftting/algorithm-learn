@@ -258,7 +258,12 @@ SuperPow : 计算带 次幂的， 很容易就越界，这里还是利用了二�
 同时这个要注意的是，对于% 取余的计算，这个是有技巧的，有些数计算需要
 
 
+7-21:
+ReversesString:
 
+IntegerToRoman:
+
+RomanToInteger:
 
 
 
