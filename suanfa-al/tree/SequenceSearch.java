@@ -1,4 +1,4 @@
-package search;
+package tree;
 
 /**
  * 链表结构，hash结构中可以使用的

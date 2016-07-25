@@ -1,14 +1,7 @@
-package search;
+package tree;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-
-import easy.CommonUtil;
-import easy.tree.BinaryTreeOrderOne;
-import easy.tree.TreeNode;
-import easy.tree.TreeNodeFactory;
-import string.WordTree;
 
 /**
  * Created by wm on 16/2/19.

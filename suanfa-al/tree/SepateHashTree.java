@@ -1,4 +1,4 @@
-package search;
+package tree;
 
 /**
  * Created by wm on 16/2/24.
