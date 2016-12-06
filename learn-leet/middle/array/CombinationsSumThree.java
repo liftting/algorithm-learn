@@ -18,7 +18,7 @@ import easy.CommonUtil;
  * 1,given that only numbers from 1 to 9 can be used 就是给的数只能使用 1- 9
  * 2, 回溯要特殊处理，避免超时，
  */
-public class CombintaionsSumThree {
+public class CombinationsSumThree {
 
     public static void main(String[] args) {
         Solution s = new Solution();

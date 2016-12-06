@@ -8,6 +8,11 @@ import java.util.List;
  * this is cha zhao tree
  * <p/>
  * 二叉查找树，
+ * 性质：
+ * 左子树不为空， 左子树上节点的值小于根节点值
+ * 右子树不为空，右子树的值要大于根节点值
+ * <p/>
+ * 左右子树 分别为二叉查找树，
  */
 public class ChazhaoTree {
 
@@ -22,7 +27,7 @@ public class ChazhaoTree {
 
         bst.show();
 
-        bst.remove(bst.root,2);
+        bst.remove(bst.root, 2);
 
         bst.show();
 
