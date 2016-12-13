@@ -13,8 +13,8 @@ public class CountDownMain {
 
         private final CountDownLatch controller;
 
-        public Video(int user) {
-            controller = new CountDownLatch(user);
+        public Video(CountDownLatch latch) {
+            controller = latch;
         }
 
         private void arrive(String name) {
@@ -27,8 +27,9 @@ public class CountDownMain {
         @Override
         public void run() {
             try {
+                System.out.printf("%s: thread begin to enter video, but wait().\n", Thread.currentThread().getName());
                 controller.await();
-                System.out.printf("Video: all user has comeing.\n");
+                System.out.printf("%s: all user has comeing.\n", Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -59,8 +60,11 @@ public class CountDownMain {
     }
 
     public static void main(String[] agrs) {
-        Video video = new Video(10);
-        new Thread(video).start();
+        Video video = new Video(new CountDownLatch(10));
+
+        for(int i=0;i<5;i++) {
+            new Thread(video).start();
+        }
 
         for (int i = 0; i < 10; i++) {
             new Thread(new User(video, "User:" + i)).start();
