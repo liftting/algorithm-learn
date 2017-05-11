@@ -389,11 +389,11 @@ public abstract class AbstractQueuedSynchronizer
         /**
          * Marker to indicate a node is waiting in shared mode
          */
-        static final Node SHARED = new Node();
+        static final Node SHARED = new Node(); // 同步模式- 共享
         /**
          * Marker to indicate a node is waiting in exclusive mode
          */
-        static final Node EXCLUSIVE = null;
+        static final Node EXCLUSIVE = null; //同步模式-排他
 
         /**
          * waitStatus value to indicate thread has cancelled
@@ -460,7 +460,7 @@ public abstract class AbstractQueuedSynchronizer
          * cancelled thread never succeeds in acquiring, and a thread only
          * cancels itself, not any other node.
          */
-        volatile Node prev;
+        volatile Node prev; // 前驱节点，如果当前节点被取消了，就需要用这个节点来和后记节点完成连接
 
         /**
          * Link to the successor node that the current node/thread
@@ -475,7 +475,7 @@ public abstract class AbstractQueuedSynchronizer
          * point to the node itself instead of null, to make life
          * easier for isOnSyncQueue.
          */
-        volatile Node next;
+        volatile Node next; //后继节点
 
         /**
          * The thread that enqueued this node.  Initialized on
@@ -493,7 +493,7 @@ public abstract class AbstractQueuedSynchronizer
          * we save a field by using special value to indicate shared
          * mode.
          */
-        Node nextWaiter;
+        Node nextWaiter;//存储在Condition队列中的后继节点
 
         /**
          * Returns true if node is waiting in shared mode.
@@ -547,6 +547,9 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * The synchronization state.
+     * 表示同步状态
+     * 这个是用来控制大部分的同步需求基础，
+     * 子类通过 acquire() release()来操作这个状态，
      */
     private volatile int state;
 
@@ -597,6 +600,7 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * Inserts node into queue, initializing if necessary. See picture above.
+     * 保证Node节点 都有机会进入到 sync的队列中，
      *
      * @param node the node to insert
      * @return node's predecessor
@@ -619,6 +623,9 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * Creates and enqueues node for current thread and given mode.
+     * 1，先尝试在队列尾部添加
+     * 2，失败，或者第一个入队节点，就走入enq
+     * （所有addWaiter  中没有成功入队列的线程都会进入enq）
      *
      * @param mode Node.EXCLUSIVE for exclusive, Node.SHARED for shared
      * @return the new node
@@ -889,7 +896,7 @@ public abstract class AbstractQueuedSynchronizer
      * @param arg  the acquire argument
      * @return {@code true} if interrupted while waiting
      */
-    final boolean acquireQueued(final Node node, int arg) {
+        final boolean acquireQueued(final Node node, int arg) {
         boolean failed = true;
         try {
             boolean interrupted = false;
@@ -968,7 +975,7 @@ public abstract class AbstractQueuedSynchronizer
                     failed = false;
                     return true;
                 }
-                nanosTimeout = deadline - System.nanoTime();
+                nanosTimeout = deadline - System.nanoTime(); //时间计算 ，计算休眠当前线程的时间，
                 if (nanosTimeout <= 0L)
                     return false;
                 if (shouldParkAfterFailedAcquire(p, node) &&

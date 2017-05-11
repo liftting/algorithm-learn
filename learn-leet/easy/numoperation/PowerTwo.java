@@ -8,6 +8,8 @@ public class PowerTwo {
     public static void main(String[] args) {
         Solution s = new Solution();
         System.out.print(s.isPowerOfTwo(-16));
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
     }
 
     public static class Solution {
