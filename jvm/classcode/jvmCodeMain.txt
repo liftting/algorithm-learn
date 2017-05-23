@@ -1,0 +1,96 @@
+Classfile /Users/wm/git-code/algorithm/algorithm-learn/jvm/JvmCodeMain.class
+  Last modified 2017-5-22; size 584 bytes
+  MD5 checksum 9737ad62689f0dd36e6038722ac5fe11
+  Compiled from "JvmCodeMain.java"
+public class JvmCodeMain
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#26        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #9.#27         // JvmCodeMain.age:I
+   #3 = String             #28            // whats name
+   #4 = Fieldref           #9.#29         // JvmCodeMain.name:Ljava/lang/String;
+   #5 = String             #30            // this is what
+   #6 = Fieldref           #9.#31         // JvmCodeMain.desc:Ljava/lang/String;
+   #7 = String             #32            // this is
+   #8 = Fieldref           #9.#33         // JvmCodeMain.text:Ljava/lang/String;
+   #9 = Class              #34            // JvmCodeMain
+  #10 = Class              #35            // java/lang/Object
+  #11 = Utf8               age
+  #12 = Utf8               I
+  #13 = Utf8               name
+  #14 = Utf8               Ljava/lang/String;
+  #15 = Utf8               text
+  #16 = Utf8               desc
+  #17 = Utf8               <init>
+  #18 = Utf8               ()V
+  #19 = Utf8               Code
+  #20 = Utf8               LineNumberTable
+  #21 = Utf8               (I)V
+  #22 = Utf8               add
+  #23 = Utf8               <clinit>
+  #24 = Utf8               SourceFile
+  #25 = Utf8               JvmCodeMain.java
+  #26 = NameAndType        #17:#18        // "<init>":()V
+  #27 = NameAndType        #11:#12        // age:I
+  #28 = Utf8               whats name
+  #29 = NameAndType        #13:#14        // name:Ljava/lang/String;
+  #30 = Utf8               this is what
+  #31 = NameAndType        #16:#14        // desc:Ljava/lang/String;
+  #32 = Utf8               this is
+  #33 = NameAndType        #15:#14        // text:Ljava/lang/String;
+  #34 = Utf8               JvmCodeMain
+  #35 = Utf8               java/lang/Object
+{
+  public JvmCodeMain();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: bipush        10
+         7: putfield      #2                  // Field age:I
+        10: aload_0
+        11: ldc           #3                  // String whats name
+        13: putfield      #4                  // Field name:Ljava/lang/String;
+        16: ldc           #5                  // String this is what
+        18: putstatic     #6                  // Field desc:Ljava/lang/String;
+        21: return
+      LineNumberTable:
+        line 13: 0
+        line 14: 4
+        line 15: 10
+        line 16: 16
+        line 17: 21
+
+  public JvmCodeMain(int);
+    descriptor: (I)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iload_1
+         6: putfield      #2                  // Field age:I
+         9: return
+      LineNumberTable:
+        line 19: 0
+        line 20: 4
+        line 21: 9
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: ldc           #7                  // String this is
+         2: putstatic     #8                  // Field text:Ljava/lang/String;
+         5: return
+      LineNumberTable:
+        line 10: 0
+}
+SourceFile: "JvmCodeMain.java"
